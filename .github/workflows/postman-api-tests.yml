@@ -20,16 +20,13 @@ jobs:
         name: "Install newman"
         run: "npm install -g newman"
       - 
-        name: "Install newman reporter"
-        run: "npm install -g newman-reporter-htmlextra"
-      - 
         name: "Run tests"
-        run: "newman run Personal.postman_collection.json -e reqres.postman_environment.json -r htmlextra --reporter-htmlextra-export htmlreport.html --reporter-htmlextra-darkTheme  > runreport1.html"
+        run: "newman run Personal.postman_collection.json -e reqres.postman_environment.json"
       - 
         name: "Upload HTML report"
         uses: actions/upload-artifact@v2
         with: 
-          name: runreport1
-          path: runreport1.html
+          name: newman-report
+          path: htmlreport.html
         
     
