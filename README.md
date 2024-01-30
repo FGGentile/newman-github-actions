@@ -1,4 +1,4 @@
-#Features:
+##Features:
 - Newman: Utilizes Newman for running Postman collections.
 - GitHub Actions: Implements GitHub Actions for automated test execution upon code pushes or pull requests.
 ## Setup
